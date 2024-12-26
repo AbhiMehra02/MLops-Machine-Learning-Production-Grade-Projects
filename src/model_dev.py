@@ -21,7 +21,7 @@ class Model(ABC):
         """
         pass
 
-class LinearRegression(Model):
+class LinearRegressionModel(Model):
     """
     Linear Regression model
     """
