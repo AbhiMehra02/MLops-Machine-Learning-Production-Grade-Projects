@@ -1,8 +1,14 @@
-from zenml.steps import BaseParameters
+from dataclasses import dataclass
+from typing import Dict
 
-class ModelNameConfig(BaseParameters):
+@dataclass
+class ModelNameConfig:
     """
-    Model Config
+    Model Config using dataclass
     """
     model_name: str = "LinearRegression"
-    model_kwargs: dict ={}
+    model_kwargs: Dict = None
+
+    def __post_init__(self):
+        if self.model_kwargs is None:
+            self.model_kwargs = {}

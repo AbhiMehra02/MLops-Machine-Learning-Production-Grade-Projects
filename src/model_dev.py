@@ -38,7 +38,7 @@ class LinearRegressionModel(Model):
         """
         try:
             reg = LinearRegression()
-            reg.model.fit(X_train,y_train)
+            reg.fit(X_train,y_train)
             logging.info("Model training completed")
             return reg
         except Exception as e:
